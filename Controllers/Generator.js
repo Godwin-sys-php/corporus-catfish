@@ -50,6 +50,7 @@ module.exports = async (req, res) => {
                 OPENSSL_CONF: "/dev/null",
               },
             },
+            height: "22cm",
             width: "7.5cm",
             localUrlAccess: true,
           };
