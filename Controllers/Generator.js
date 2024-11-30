@@ -50,7 +50,7 @@ module.exports = async (req, res) => {
                 OPENSSL_CONF: "/dev/null",
               },
             },
-            heigth: "22cm",
+            height: "30cm",
             width: "7.5cm",
             localUrlAccess: true,
           };
@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
                   });
               }
               console.log("hey7");
-              await Sessions.update({ invoice: nameOfFile }, { id: number });
+              await Sessions.update({ invoice: nameOfFile, isDone: 0, }, { id: number });
 
               const sessions = await Sessions.customQuery(
                 "SELECT * FROM sessions WHERE isDone = 0 OR isPaid = 0",
