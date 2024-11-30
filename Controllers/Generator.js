@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
                   });
               }
               console.log("hey7");
-              await Sessions.update({ invoice: nameOfFile, isDone: 0, }, { id: number });
+              await Sessions.update({ invoice: nameOfFile, }, { id: number });
 
               const sessions = await Sessions.customQuery(
                 "SELECT * FROM sessions WHERE isDone = 0 OR isPaid = 0",
